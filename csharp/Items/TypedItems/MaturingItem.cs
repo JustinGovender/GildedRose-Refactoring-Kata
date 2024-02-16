@@ -2,7 +2,7 @@ using csharp.Items.TypedItems.Interfaces;
 
 namespace csharp.Items.TypedItems
 {
-    public class MaturingItem : Item, ITypedItem
+    public class MaturingItem : TypedItem, ITypedItem
     {
         public MaturingItem(Item item)
         {

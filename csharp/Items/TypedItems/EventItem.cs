@@ -2,7 +2,7 @@ using csharp.Items.TypedItems.Interfaces;
 
 namespace csharp.Items.TypedItems
 {
-    public class EventItem : Item, ITypedItem
+    public class EventItem : TypedItem, ITypedItem
     {
         public EventItem(Item item)
         {

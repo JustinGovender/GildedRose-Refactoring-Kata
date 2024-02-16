@@ -2,7 +2,7 @@ using csharp.Items.TypedItems.Interfaces;
 
 namespace csharp.Items.TypedItems
 {
-    public class LegendaryItem : Item, ITypedItem
+    public class LegendaryItem : TypedItem, ITypedItem
     {
         public LegendaryItem(Item item)
         {

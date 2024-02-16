@@ -2,7 +2,7 @@ using csharp.Items.TypedItems.Interfaces;
 
 namespace csharp.Items.TypedItems
 {
-    public class ConjuredItem : Item, ITypedItem
+    public class ConjuredItem : TypedItem, ITypedItem
     {
         public ConjuredItem(Item item)
         {
