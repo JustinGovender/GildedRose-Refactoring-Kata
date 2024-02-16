@@ -1,5 +1,6 @@
 ﻿using NUnit.Framework;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace csharp
 {
@@ -16,7 +17,7 @@ namespace csharp
             IList<Item> Items = new List<Item> { new Item { Name = "normalItem", SellIn = sellIn, Quality = quality } };
             GildedRose app = new GildedRose(Items);
             app.UpdateQuality();
-            Assert.AreEqual(expected, app.Items[0].Quality);
+            Assert.AreEqual(expected, app.Items[0].Name);
         }
         
         [Theory]

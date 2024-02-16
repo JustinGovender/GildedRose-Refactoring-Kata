@@ -4,12 +4,7 @@ namespace csharp.Items.TypedItems
 {
     public class MaturingItem : TypedItem, ITypedItem
     {
-        public MaturingItem(Item item)
-        {
-            Name = item.Name;
-            SellIn = item.SellIn;
-            Quality = item.Quality;
-        }
+        public MaturingItem(Item item) : base(item) { }
     
         public void makeOneDayOlder()
         {

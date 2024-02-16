@@ -4,12 +4,7 @@ namespace csharp.Items.TypedItems
 {
     public class LegendaryItem : TypedItem, ITypedItem
     {
-        public LegendaryItem(Item item)
-        {
-            Name = item.Name;
-            SellIn = item.SellIn;
-            Quality = item.Quality;
-        }
+        public LegendaryItem(Item item) : base(item) { }
     
         public void makeOneDayOlder()
         {

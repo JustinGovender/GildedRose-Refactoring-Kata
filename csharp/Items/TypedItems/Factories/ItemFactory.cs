@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using System.Linq;
+using csharp.Items.TypedItems.Interfaces;
 
 namespace csharp.Items.TypedItems.Factories
 {
@@ -8,8 +9,9 @@ namespace csharp.Items.TypedItems.Factories
         private static readonly IEnumerable<string> ValidMaturingItems = new[] { "Aged Brie" };
         private static readonly IEnumerable<string> ValidLegendaryItems = new[] { "Sulfuras, Hand of Ragnaros" };
         private static readonly IEnumerable<string> ValidEventItems = new[] { "Backstage passes to a TAFKAL80ETC concert" };
+        private static readonly string ConjuredItemIdentifier = "Conjured";
 
-        public static IList<Item> GetTypedItems(IList<Item> items)
+        public static IList<ITypedItem> GetTypedItems(IList<Item> items)
         {
             return items.Select(GetTypedItem).ToList();
         }
@@ -18,7 +20,7 @@ namespace csharp.Items.TypedItems.Factories
         /// Returns the valid typed items from a generic item
         /// </summary>
         /// <returns>typed item</returns>
-        private static Item GetTypedItem(Item item)
+        private static ITypedItem GetTypedItem(Item item)
         {
             if (ValidMaturingItems.Contains(item.Name))
             {
@@ -32,7 +34,11 @@ namespace csharp.Items.TypedItems.Factories
             {
                 return new EventItem(item);
             }
-        
+            if (item.Name.Contains(ConjuredItemIdentifier))
+            {
+                return new ConjuredItem(item);
+            }
+            // else default to a normal item
             return new NormalItem(item);
         }
     

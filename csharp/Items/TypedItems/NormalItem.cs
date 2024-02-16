@@ -4,12 +4,8 @@ namespace csharp.Items.TypedItems
 {
     public class NormalItem : TypedItem, ITypedItem
     {
-        public NormalItem(Item item)
-        {
-            Name = item.Name;
-            SellIn = item.SellIn;
-            Quality = item.Quality;
-        }
+        public NormalItem(Item item) : base(item) { }
+
         public void makeOneDayOlder()
         {
             throw new System.NotImplementedException();
