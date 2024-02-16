@@ -1,17 +1,20 @@
-namespace csharp;
+using csharp.Items.TypedItems.Interfaces;
 
-public class MaturingItem : Item, ITypedItem
+namespace csharp.Items.TypedItems
 {
-    public MaturingItem(Item item)
+    public class MaturingItem : Item, ITypedItem
     {
-        Name = item.Name;
-        SellIn = item.SellIn;
-        Quality = item.Quality;
-    }
+        public MaturingItem(Item item)
+        {
+            Name = item.Name;
+            SellIn = item.SellIn;
+            Quality = item.Quality;
+        }
     
-    public void makeOneDayOlder()
-    {
-        throw new System.NotImplementedException();
+        public void makeOneDayOlder()
+        {
+            throw new System.NotImplementedException();
+        }
     }
 }
 

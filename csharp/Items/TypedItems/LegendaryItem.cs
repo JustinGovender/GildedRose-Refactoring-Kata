@@ -1,17 +1,20 @@
-namespace csharp;
+using csharp.Items.TypedItems.Interfaces;
 
-public class LegendaryItem : Item, ITypedItem
+namespace csharp.Items.TypedItems
 {
-    public LegendaryItem(Item item)
+    public class LegendaryItem : Item, ITypedItem
     {
-        Name = item.Name;
-        SellIn = item.SellIn;
-        Quality = item.Quality;
-    }
+        public LegendaryItem(Item item)
+        {
+            Name = item.Name;
+            SellIn = item.SellIn;
+            Quality = item.Quality;
+        }
     
-    public void makeOneDayOlder()
-    {
-        throw new System.NotImplementedException();
+        public void makeOneDayOlder()
+        {
+            throw new System.NotImplementedException();
+        }
     }
 }
 

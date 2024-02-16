@@ -1,16 +1,19 @@
-namespace csharp;
+using csharp.Items.TypedItems.Interfaces;
 
-public class EventItem : Item, ITypedItem
+namespace csharp.Items.TypedItems
 {
-    public EventItem(Item item)
+    public class EventItem : Item, ITypedItem
     {
-        Name = item.Name;
-        SellIn = item.SellIn;
-        Quality = item.Quality;
-    }
-    public void makeOneDayOlder()
-    {
-        throw new System.NotImplementedException();
+        public EventItem(Item item)
+        {
+            Name = item.Name;
+            SellIn = item.SellIn;
+            Quality = item.Quality;
+        }
+        public void makeOneDayOlder()
+        {
+            throw new System.NotImplementedException();
+        }
     }
 }
 

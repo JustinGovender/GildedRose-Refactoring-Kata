@@ -1,6 +1,7 @@
-namespace csharp;
-
-public interface ITypedItem
+namespace csharp.Items.TypedItems.Interfaces
 {
-    public void makeOneDayOlder();
+    public interface ITypedItem
+    {
+        public void makeOneDayOlder();
+    }
 }

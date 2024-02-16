@@ -1,16 +1,19 @@
-namespace csharp;
+using csharp.Items.TypedItems.Interfaces;
 
-public class NormalItem : Item, ITypedItem
+namespace csharp.Items.TypedItems
 {
-    public NormalItem(Item item)
+    public class NormalItem : Item, ITypedItem
     {
-        Name = item.Name;
-        SellIn = item.SellIn;
-        Quality = item.Quality;
-    }
-    public void makeOneDayOlder()
-    {
-        throw new System.NotImplementedException();
+        public NormalItem(Item item)
+        {
+            Name = item.Name;
+            SellIn = item.SellIn;
+            Quality = item.Quality;
+        }
+        public void makeOneDayOlder()
+        {
+            throw new System.NotImplementedException();
+        }
     }
 }
 

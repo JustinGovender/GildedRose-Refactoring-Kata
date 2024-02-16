@@ -1,17 +1,20 @@
-namespace csharp;
+using csharp.Items.TypedItems.Interfaces;
 
-public class ConjuredItem : Item, ITypedItem
+namespace csharp.Items.TypedItems
 {
-    public ConjuredItem(Item item)
+    public class ConjuredItem : Item, ITypedItem
     {
-        Name = item.Name;
-        SellIn = item.SellIn;
-        Quality = item.Quality;
-    }
+        public ConjuredItem(Item item)
+        {
+            Name = item.Name;
+            SellIn = item.SellIn;
+            Quality = item.Quality;
+        }
     
-    public void makeOneDayOlder()
-    {
-        throw new System.NotImplementedException();
+        public void makeOneDayOlder()
+        {
+            throw new System.NotImplementedException();
+        }
     }
 }
 
