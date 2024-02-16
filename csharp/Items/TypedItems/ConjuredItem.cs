@@ -8,7 +8,8 @@ namespace csharp.Items.TypedItems
     
         public void makeOneDayOlder()
         {
-            throw new System.NotImplementedException();
+            DecreaseQuality(IsExpired ? 4 : 2);
+            AgeOneDay();
         }
     }
 }

@@ -7,7 +7,9 @@ namespace csharp.Items.TypedItems
         public EventItem(Item item) : base(item) { }
         public void makeOneDayOlder()
         {
-            throw new System.NotImplementedException();
+            IncreaseQuality(SellIn < 11 ? 2 : 1);
+            Quality = IsExpired ? 0 : Quality; //Worth 0 if expired
+            AgeOneDay();
         }
     }
 }

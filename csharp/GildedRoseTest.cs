@@ -17,7 +17,7 @@ namespace csharp
             IList<Item> Items = new List<Item> { new Item { Name = "normalItem", SellIn = sellIn, Quality = quality } };
             GildedRose app = new GildedRose(Items);
             app.UpdateQuality();
-            Assert.AreEqual(expected, app.Items[0].Name);
+            Assert.AreEqual(expected, app.Items[0].Quality);
         }
         
         [Theory]

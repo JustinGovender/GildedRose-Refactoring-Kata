@@ -6,10 +6,7 @@ namespace csharp.Items.TypedItems
     {
         public LegendaryItem(Item item) : base(item) { }
     
-        public void makeOneDayOlder()
-        {
-            throw new System.NotImplementedException();
-        }
+        public void makeOneDayOlder() { }
     }
 }
 
