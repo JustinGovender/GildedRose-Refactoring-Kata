@@ -16,7 +16,7 @@ namespace csharp
             IList<Item> Items = new List<Item> { new Item { Name = "normalItem", SellIn = sellIn, Quality = quality } };
             GildedRose app = new GildedRose(Items);
             app.UpdateQuality();
-            Assert.AreEqual(expected, Items[0].Quality);
+            Assert.AreEqual(expected, app.Items[0].Quality);
         }
         
         [Theory]
@@ -28,7 +28,7 @@ namespace csharp
             IList<Item> Items = new List<Item> { new Item { Name = "normalItem", SellIn = sellIn, Quality = 20 } };
             GildedRose app = new GildedRose(Items);
             app.UpdateQuality();
-            Assert.AreEqual(expected, Items[0].SellIn);
+            Assert.AreEqual(expected, app.Items[0].SellIn);
         }
         
         [Theory]
@@ -41,7 +41,7 @@ namespace csharp
             IList<Item> Items = new List<Item> { new Item { Name = "Aged Brie", SellIn = sellIn, Quality = quality } };
             GildedRose app = new GildedRose(Items);
             app.UpdateQuality();
-            Assert.AreEqual(expected, Items[0].Quality);
+            Assert.AreEqual(expected, app.Items[0].Quality);
         }
         
         [Theory]
@@ -53,7 +53,7 @@ namespace csharp
             IList<Item> Items = new List<Item> { new Item { Name = "Aged Brie", SellIn = sellIn, Quality = 20 } };
             GildedRose app = new GildedRose(Items);
             app.UpdateQuality();
-            Assert.AreEqual(expected, Items[0].SellIn);
+            Assert.AreEqual(expected, app.Items[0].SellIn);
         }
         
         [Theory]
@@ -67,7 +67,7 @@ namespace csharp
             IList<Item> Items = new List<Item> { new Item { Name = "Backstage passes to a TAFKAL80ETC concert", SellIn = sellIn, Quality = quality } };
             GildedRose app = new GildedRose(Items);
             app.UpdateQuality();
-            Assert.AreEqual(expected, Items[0].Quality);
+            Assert.AreEqual(expected, app.Items[0].Quality);
         }
         
         [Theory]
@@ -79,7 +79,7 @@ namespace csharp
             IList<Item> Items = new List<Item> { new Item { Name = "Backstage passes to a TAFKAL80ETC concert", SellIn = sellIn, Quality = 20 } };
             GildedRose app = new GildedRose(Items);
             app.UpdateQuality();
-            Assert.AreEqual(expected, Items[0].SellIn);
+            Assert.AreEqual(expected, app.Items[0].SellIn);
         }
         
         [Theory]
@@ -90,7 +90,7 @@ namespace csharp
             IList<Item> Items = new List<Item> { new Item { Name = "Sulfuras, Hand of Ragnaros", SellIn = sellIn, Quality = quality } };
             GildedRose app = new GildedRose(Items);
             app.UpdateQuality();
-            Assert.AreEqual(expected, Items[0].Quality);
+            Assert.AreEqual(expected, app.Items[0].Quality);
         }
         
         [Theory]
@@ -102,7 +102,7 @@ namespace csharp
             IList<Item> Items = new List<Item> { new Item { Name = "Sulfuras, Hand of Ragnaros", SellIn = sellIn, Quality = 20 } };
             GildedRose app = new GildedRose(Items);
             app.UpdateQuality();
-            Assert.AreEqual(expected, Items[0].SellIn);
+            Assert.AreEqual(expected, app.Items[0].SellIn);
         }
         
         [Theory]
@@ -115,7 +115,7 @@ namespace csharp
             IList<Item> Items = new List<Item> { new Item { Name = "Conjured Mana Cake", SellIn = sellIn, Quality = quality } };
             GildedRose app = new GildedRose(Items);
             app.UpdateQuality();
-            Assert.AreEqual(expected, Items[0].Quality);
+            Assert.AreEqual(expected, app.Items[0].Quality);
         }
         
         [Theory]
@@ -127,7 +127,7 @@ namespace csharp
             IList<Item> Items = new List<Item> { new Item { Name = "Conjured Mana Cake", SellIn = sellIn, Quality = 20 } };
             GildedRose app = new GildedRose(Items);
             app.UpdateQuality();
-            Assert.AreEqual(expected, Items[0].SellIn);
+            Assert.AreEqual(expected, app.Items[0].SellIn);
         }
     }
 }

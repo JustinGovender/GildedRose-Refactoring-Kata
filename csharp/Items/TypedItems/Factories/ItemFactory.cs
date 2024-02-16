@@ -8,12 +8,17 @@ namespace csharp.Items.TypedItems.Factories
         private static readonly IEnumerable<string> ValidMaturingItems = new[] { "Aged Brie" };
         private static readonly IEnumerable<string> ValidLegendaryItems = new[] { "Sulfuras, Hand of Ragnaros" };
         private static readonly IEnumerable<string> ValidEventItems = new[] { "Backstage passes to a TAFKAL80ETC concert" };
-    
+
+        public static IList<Item> GetTypedItems(IList<Item> items)
+        {
+            return items.Select(GetTypedItem).ToList();
+        }
+        
         /// <summary>
         /// Returns the valid typed items from a generic item
         /// </summary>
         /// <returns>typed item</returns>
-        public static Item GetTypedItem(Item item)
+        private static Item GetTypedItem(Item item)
         {
             if (ValidMaturingItems.Contains(item.Name))
             {

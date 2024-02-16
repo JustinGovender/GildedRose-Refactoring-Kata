@@ -1,13 +1,14 @@
 ﻿using System.Collections.Generic;
+using csharp.Items.TypedItems.Factories;
 
 namespace csharp
 {
     public class GildedRose
     {
-        IList<Item> Items;
+        public readonly IList<Item> Items;
         public GildedRose(IList<Item> Items)
         {
-            this.Items = Items;
+            this.Items = ItemFactory.GetTypedItems(Items);
         }
 
         public void UpdateQuality()
