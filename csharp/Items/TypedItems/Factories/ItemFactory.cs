@@ -1,19 +1,34 @@
+using System.Collections.Generic;
+using System.Linq;
+
 namespace csharp;
 
 public class ItemFactory
 {
+    private static readonly IEnumerable<string> ValidMaturingItems = new[] { "Aged Brie" };
+    private static readonly IEnumerable<string> ValidLegendaryItems = new[] { "Sulfuras, Hand of Ragnaros" };
+    private static readonly IEnumerable<string> ValidEventItems = new[] { "Backstage passes to a TAFKAL80ETC concert" };
+    
     /// <summary>
-    /// Creates the valid typed item given a generic item
+    /// Returns the valid typed items from a generic item
     /// </summary>
-    /// <returns></returns>
+    /// <returns>typed item</returns>
     public static Item GetTypedItem(Item item)
     {
-        // if (item.Name.Equals("Aged Brie"))
-        // {
-        //     return 
-        // }
-
-        return item;
+        if (ValidMaturingItems.Contains(item.Name))
+        {
+            return new MaturingItem(item);
+        }
+        if (ValidLegendaryItems.Contains(item.Name))
+        {
+            return new LegendaryItem(item);
+        }        
+        if (ValidEventItems.Contains(item.Name))
+        {
+            return new EventItem(item);
+        }
+        
+        return new NormalItem(item);
     }
     
 }
